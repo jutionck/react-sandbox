@@ -13,13 +13,14 @@ export default class Counter extends React.Component {
   increment() {
     this.setState({
       count: this.state.count + 1,
+      alert: null,
     });
   }
 
   decrement = () => {
     if (this.state.count <= 0) {
       this.setState({
-        alert: <Alert />,
+        alert: <Alert title="Angka tidak boleh negatif" type="warning" />,
       });
     } else {
       this.setState({
