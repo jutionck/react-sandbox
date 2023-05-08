@@ -1,11 +1,9 @@
-import Home from "./components/home";
-import Nav from "./components/template/Nav";
+import News from "./demo/news/News";
 
 function App() {
   return (
     <>
-      <Nav />
-      <Home />
+      <News />
     </>
   );
 }
