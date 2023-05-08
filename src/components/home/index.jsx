@@ -8,19 +8,17 @@ import Founder from "./founder";
 import Product from "./product";
 import Contact from "./contact";
 
-export default class Home extends React.Component {
-  render() {
-    return (
-      <>
-        <Banner />
-        <NewsLetter />
-        <Service />
-        <About />
-        <Faq />
-        <Founder />
-        <Product />
-        <Contact />
-      </>
-    );
-  }
+export default function Home() {
+  return (
+    <>
+      <Banner />
+      <NewsLetter />
+      <Service />
+      <About />
+      <Faq />
+      <Founder />
+      <Product />
+      <Contact />
+    </>
+  );
 }
