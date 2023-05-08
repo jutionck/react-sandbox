@@ -1,9 +1,10 @@
-import News from "./demo/news/News";
+import Counter from "./demo/counter";
+import "./App.css";
 
 function App() {
   return (
     <>
-      <News />
+      <Counter />
     </>
   );
 }
