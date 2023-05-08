@@ -1,5 +1,6 @@
 import React from "react";
 import Alert from "./Alert";
+import ButtonCounter from "./ButtonCounter";
 
 export default class Counter extends React.Component {
   constructor(props) {
@@ -10,12 +11,12 @@ export default class Counter extends React.Component {
     };
   }
 
-  increment() {
+  increment = () => {
     this.setState({
       count: this.state.count + 1,
       alert: null,
     });
-  }
+  };
 
   decrement = () => {
     if (this.state.count <= 0) {
@@ -34,18 +35,11 @@ export default class Counter extends React.Component {
       <>
         <div className="container">
           <div className="d-flex mt-4 mb-3">
-            <button className="btn btn-primary" onClick={this.decrement}>
-              -
-            </button>
+            <ButtonCounter title="-" type="danger" cb={this.decrement} />
             <span className="text-dark mx-2 align-self-center">
               {this.state.count}
             </span>
-            <button
-              className="btn btn-primary"
-              onClick={this.increment.bind(this)}
-            >
-              +
-            </button>
+            <ButtonCounter title="+" type="primary" cb={this.increment} />
           </div>
           <span className="mt-5">{this.state.alert}</span>
         </div>
