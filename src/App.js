@@ -1,9 +1,11 @@
-import NavbarComponent from "./component/navbar";
+import Home from "./components/home";
+import Nav from "./components/template/Nav";
 
 function App() {
   return (
     <>
-      <NavbarComponent title="Enigma Camp" />
+      <Nav />
+      <Home />
     </>
   );
 }
